@@ -16,7 +16,12 @@
 *************************************************************************/
 #include <iostream>
 #include "Polygon.h"
+#include "Rectangle.h"
 using namespace std;
 int main() {
+    Rectangle rectangle(5, 3);      //creates a rectangle object
+    cout<<"Rectangle area:"<<rectangle.getArea()<<endl;
+    cout<<"Rectangle drawing:"<<endl;
+    rectangle.draw();
     return 0;
 }
