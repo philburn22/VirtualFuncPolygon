@@ -2,7 +2,7 @@
 ** Author                : Nathan Philburn
 ** Program               : hw1, q2
 ** Date Created          : March 20, 2025
-** Date Last Modified    : March 23, 2025
+** Date Last Modified    : March 24, 2025
 ** Usage                 : No command line arguments
 **
 ** Problem:
@@ -17,11 +17,21 @@
 #include <iostream>
 #include "Polygon.h"
 #include "Rectangle.h"
+#include "Triangle.h"
 using namespace std;
 int main() {
-    Rectangle rectangle(5, 3);      //creates a rectangle object
-    cout<<"Rectangle area:"<<rectangle.getArea()<<endl;
+    Triangle triangle(14, 7);
+    cout<<"Triangle area: "<<triangle.getArea()<<" stars."<<endl;
+    cout<<"drawing:"<<endl;
+    triangle.draw();
+
+    Rectangle rectangle(10, 9);      //creates a rectangle object
+    cout<<"\nRectangle area: "<<rectangle.getArea()<<" stars."<<endl;
     cout<<"Rectangle drawing:"<<endl;
     rectangle.draw();
+
+    //Polygon polygon;       //Question 1: this causes a compiling error because Polygon is an abstract class which can't instantiate because it has incomplete implementations.
+
+    //Polygon polygon2;     //Question 2: this causes a compiling error because although the Polygon class is no longer abstract, there is no definition for getArea, so the linker cannot work properly.
     return 0;
 }

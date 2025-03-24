@@ -7,4 +7,6 @@ add_executable(Philburn_HW3_Q2 Polygon.cpp
         Polygon.h
         Main.cpp
         Rectangle.h
-        Rectangle.cpp)
+        Rectangle.cpp
+        Triangle.h
+        Triangle.cpp)
